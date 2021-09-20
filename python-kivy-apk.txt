@@ -1,0 +1,43 @@
+1) go to: https://bootstrap.pypa.io/get-pip.py(python3 is required to be on your machine to install this
+* sudo apt-get install python3-distutils
+* sudo python3 get-pip.py
+
+2) dependencies needed:
+* sudo apt-get install -y    python3-pip    build-essential    git     python    python3-dev
+* sudo apt-get install -y    libsdl2-dev    libsdl2-image-dev    libsdl2-mixer-dev    libsdl2-ttf-dev    libportmidi-dev    libswscale-dev    libavformat-dev    libavcodec-dev    zlib1g-dev
+* sudo apt-get install cython
+* sudo pip3 install kivy
+
+3 running the python file
+* python3 main.py
+
+4) converting the python file to .apk using buildozer
+==> intalling the dependencies for the bulldozer framework
+* sudo apt-get install libltdl-dev libffl-dev libssl-dev autoconf autotools-dev
+* sudo apt install -y git zip unzip openjdk-8-jdk python3-pip autoconf  libtool pkg-config zlibig-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev 
+* pip install --user --upgrade cython==0.29.19 virtualenv # the --user should be removed if you do this in a venv
+==> making this particular path available through the terminal open
+*export PATH=$PATH:~/.local/bin/
+==> clear the terminal and navigate to desktop
+* cd desktop/
+==> to see directory in desktop
+* ls -lstr
+==> downloading bulldozer in desktop directory
+* git clone https://github.com/kivy/buildozer.git
+==> to see the buildozer folder and all files inside it
+* ls
+==> navigate to the buildozer
+* cd buildozer/
+==> do the intsallation setup of buildozer in our machine
+* sudo python3 setup.py install
+==> initializing the builddozer in the director where our python was saved
+* cd ..
+* buildozer init
+==> command to generate apk file. this file will be in a bin directory
+* buildozer android debug
+
+6) copy the apk file to your mobile phone. you can open it from our mobile phone. with this, 
+you can install the app without donloading it from playstore
+
+
+==> 
