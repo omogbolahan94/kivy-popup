@@ -1,0 +1,49 @@
+==> download pip through web: get-pip
+
+==> go to download directory in terminal and type:
+* sudo apt-get intsall python3-distutils
+* sudo python3 get-pip.py
+==> go to kivy site and copy some codes as shown below: https://matham-kivy.readthedocs.io/en/latest/installation/installation-linux-venvs.html
+==> Type the following in the desktop terminal:
+* sudo apt-get install -y \
+    python-pip \
+    build-essential \
+    git \
+    python \
+    python3-dev \
+    ffmpeg \
+    libsdl2-dev \
+    libsdl2-image-dev \
+    libsdl2-mixer-dev \
+    libsdl2-ttf-dev \
+    libportmidi-dev \
+    libswscale-dev \
+    libavformat-dev \
+    libavcodec-dev \
+    zlib1g-dev
+
+* sudo pip3 install cython
+* sudo pip3 install kivy
+
+==> create a 'test' folder in desktop and  put the python file(main.py) you want to build in it
+==> to test the python file in the test folder, navogate to it and type
+* python3 main.py
+
+==> Now to create the apk file for the kivy app
+==> go to the site: https://matham-kivy.readthedocs.io/en/latest/guide/packaging-android.html
+==> click on dependencies to see commands to download buildozer 
+* sudo apt update
+* sudo apt install -y git zip unzip openjdk-8-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev
+==> downloading buildozer in the desktop
+* git clone https://github.com/kivy/buildozer.git
+==> go to the buildozer setup
+* cd buildozer
+==> type the following in the buildozer folder 
+* sudo python3 setup.py install
+==> leave the builezer directory
+* cd ..
+==> enter the test folder
+* cd test
+==> type the following in the test folder
+* buildozer init
+* buildozer android debug 
